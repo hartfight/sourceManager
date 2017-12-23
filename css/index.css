@@ -1,0 +1,260 @@
+body{ margin: 0;padding: 0;font-family: "微软雅黑";overflow: scroll;}
+body,html{-webkit-text-size-adjust: none;width: 100%;height: 100%;}
+*{text-decoration: none;list-style: none;}
+img{border: 0px;}
+ul,li,dl,dd,dt,p,ol,h1,h2,h3,h4,h5,span{font-size: 12px;font-weight: 100;padding: 0;margin: 0;}
+.clearfix:after {
+  content: " ";
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  *zoom: 1;
+}
+
+.wrap{
+	display: flex;
+	margin: 0 auto;
+	border-top: 1px solid black;
+	margin-top: 4px;
+}
+.wrap .leftList{
+	width: 200px;
+	height: 300px;
+	
+}
+
+.wrap .leftList>.list-title{
+	font-weight: bold;
+    line-height: 26px;
+    background: #edf1f5 url(../imgs/header.png) repeat-x 0 0;
+    border-bottom: solid 1px #a7abb0;
+    cursor: default;
+    overflow: hidden;
+    height: 26px;
+    padding-left: 6px
+}
+
+
+
+
+.wrap .leftList .mini-tree-node{
+	display: block;
+	height: 24px;
+	line-height: 24px;
+	cursor: default;
+}
+
+
+.leftList .mini-tree-node .mini-tree-indent{
+	display: inline-block;
+	width: 18px;
+	height: 24px;
+	background-repeat: no-repeat;
+	background-repeat-y: repeat;
+	background-position: 8px 0px;;
+	background-image: url(../imgs/treeline.gif);
+	
+}
+
+.leftList .mini-tree-node .mini-tree-line{
+	display: inline-block;
+	width: 18px;
+	height: 24px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	
+}
+.leftList .mini-tree-node .mini-tree-nline{
+	background-image: url(../imgs/treeNodeLine.gif);
+}
+.leftList .mini-tree-node .mini-tree-lline{
+	background-image: url(../imgs/lastline.gif);
+	background-position-x: 1px;
+}
+.leftList .mini-tree-node .mini-tree-cline{
+	background-image: url(../imgs/collapseLine.gif);
+	background-position-x: 0;
+}
+.leftList .mini-tree-node .mini-tree-cline-last{
+	background-image: url(../imgs/lastCollapseNode.gif);
+	background-position-x: 0;
+}
+.leftList .mini-tree-node .mini-tree-eline{
+	background-image: url(../imgs/expandLine.gif);
+}
+.leftList .mini-tree-node .mini-tree-eline-last{
+	background-image: url(../imgs/lastExpandNode.gif);
+}
+
+
+
+
+.mini-tree-node .mini-tree-nodeshow{
+	display: inline-block;
+    vertical-align: top;
+    padding: 1px;
+    padding-left: 2px;
+    padding-right: 3px;
+    border: 0;
+    cursor: pointer;
+}
+
+.mini-tree-node .mini-tree-nodeshow .mini-tree-icon{
+    display: inline-block;
+    width: 18px;
+    height: 22px;
+    overflow: hidden;
+    line-height: 20px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin-left: -4px;
+}
+
+.mini-tree-node .mini-tree-nodeshow .mini-tree-file{
+	background-image: url(../imgs/leaf.gif);
+}
+.mini-tree-node .mini-tree-nodeshow .mini-tree-folder{
+	background-image: url(../imgs/folder.gif);
+}
+.mini-tree-node .mini-tree-nodeshow .mini-tree-ofolder{
+	background-image: url(../imgs/folder-open.gif);
+}
+
+
+
+.mini-tree-node .mini-tree-nodeshow .min-tree-ntitle{
+	height: 22px;
+    line-height: 24px;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: top;
+    margin-left: 2px;
+    font-weight: 200;
+}
+
+
+
+
+
+
+
+
+/*右侧样式：*/
+.wrap .rightContent{
+	flex: 1;
+	/*background-color: lightgray;*/
+	/*border: 1px  solid black;*/
+	-moz-box-shadow: 0 0 10px #074A99;/*firefox*/
+	-webkit-box-shadow: 0 0 10px #074A99;/*safari或chrome*/
+	box-shadow: 0 0 10px #074A99;/*opera或ie9*/
+}
+/*右侧标题*/
+.wrap .rightContent>.right-title{
+	font-weight: bold;
+    line-height: 26px;
+    background: #edf1f5 url(../imgs/header.png) repeat-x 0 0;
+    border-bottom: solid 1px #a7abb0;
+    cursor: default;
+    overflow: hidden;
+    height: 26px;
+    text-align: center;
+}
+/*内容列表*/
+.rightContent .folder-source{
+	height: 500px;
+	width: 100%;
+	overflow: scroll;
+	position: relative;
+}
+.rightContent .folder-source>#content-movebox{
+	width: 56px;
+	height: 56px;
+	background: url(../imgs/movefile.png) no-repeat 50%; 
+	position: absolute; 
+	z-index: 50;
+	 left: 0px;
+	 top:30px;
+	 display: none;
+}
+.rightContent .folder-source>#fcontainer{
+	position: relative;
+   	width: 100%;	
+   	overflow: hidden;
+}
+.rightContent .folder-source>#fcontainer>li{
+	float: left;
+    width: 122px;
+    height: 129px;
+  
+
+}
+.rightContent .folder-source>#fcontainer .content-item:hover{
+	background-color: lightgrey;
+}
+.rightContent .folder-source>#fcontainer .content-item .content-icon{
+	display: block;	
+	width: 84px;
+	height: 84px;
+	margin: 9px 18px 0;
+	background-repeat: no-repeat;	
+	background-position: 50% 50%;
+}
+.rightContent .folder-source>#fcontainer  .content-item .content-file-icon{
+	background-image: url(../imgs/cfile.png);
+	
+}
+.rightContent .folder-source>#fcontainer .content-item .content-folder-icon{
+	background-image: url(../imgs/cfolder.png);
+	
+}
+.rightContent .folder-source>#fcontainer .content-item .content-title{
+	display: block;	
+	 white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 0px 10px;
+    text-align: center;
+    	font-size: 14px;
+    	font-weight: 400;
+}
+
+#fcontainer .content-item .content-title .rename{
+	width: 60px;
+	height: 20px;
+    padding: 0px;
+    margin: 0;
+}
+#fcontainer .content-item .content-title>button{
+	height: 100%;
+	font-size: 14px;
+    margin-left: -5px;
+}
+
+
+.rightContent .folder-source .context-menu{
+	z-index: 100;
+	  position: absolute;
+	  width: 76px;
+	  border: 1px solid black;
+	  background-color: lightgray;
+}
+.rightContent .folder-source .context-menu>.list>li{
+	height: 30px;
+	line-height: 36px;
+	padding-left: 6px;
+	border-bottom: 1px solid lightblue;
+	font-size: 16px;
+	font-weight: 400;
+}
+ .folder-source .context-menu>.list>li:hover{
+ 	background-color: deepskyblue;
+ }
+ .folder-source .context-menu>.list>.disable,
+ .folder-source .context-menu>.list>.disable:hover{
+ 	    color: #c5cbd8!important;
+   		 background: #FFF;
+   		 opacity: .8;
+ }

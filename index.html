@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+
+	<body>
+		<div class="wrap">
+			<!--左侧资源列表-->
+			<div class="leftList">
+				<div class="list-title">
+					在线演示
+				</div>
+				<ul id="sourceList">
+
+				</ul>
+			</div>
+			<!--右侧内容-->
+			<div class="rightContent">
+				<div class="right-title">
+					文件夹内容
+				</div>
+				<div class="folder-source clearfix" title="">
+					<ul id="fcontainer">
+						<li class="content-item">
+							<span class="content-icon content-folder-icon"></span>
+							<span class="content-title">myComputer</span>
+							
+						</li>						
+						
+					</ul>
+
+					<div class="context-menu" style="display: none;">
+						<ul class="list" >
+							<li>打开</li>
+							<li>删除</li>
+							<li>重命名</li>
+							<li class="disable">新建文件</li>
+							<li>新建目录</li>
+						</ul>
+					</div>
+					<div id="content-movebox" style="">
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</body>
+	<script src="js/data.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
+
+<!--<li>
+						<div class="mini-tree-node">
+							<span class="mini-tree-line mini-tree-nline"></span>
+							<span class="mini-tree-nodeshow">
+								<span class="mini-tree-file mini-tree-icon"></span>
+							<span class="min-tree-ntitle">计算机</span>
+							</span>
+						</div>
+					</li>-->
